@@ -1,0 +1,264 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: Arial, sans-serif; 
+  background-color: #f5f5f5; 
+  font-size: clamp(14px, 8vmin, 50px); 
+  color: black;
+}
+
+header, footer, .container-header { 
+  background-color: #007bff; 
+  color: #fff; 
+}
+
+header { 
+  font-size: clamp(14px, 3vmin, 20px); 
+  padding: 1vmin 0; 
+  text-align: center; 
+  justify-content: center; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%;  
+  z-index: 1000; 
+}
+
+main { 
+  padding: 5vmin 0 0 0; 
+  max-width: 100%; 
+  margin: 0 auto; 
+}
+
+footer { 
+  text-align: center;  
+  padding: 3vmin 2vmin 10vmin 2vmin; 
+  font-size: clamp(12px, 2.2vmin, 18px); 
+}
+
+/* Botões */
+button, 
+.btn-diminuir, 
+.btn-aumentar, 
+.btn-resetar, 
+#btn-fullscreen { 
+  font-weight: bold; 
+  font-size: clamp(14px, 3vmin, 20px); 
+  padding: 2vmin 0; 
+  border: none; 
+  border-radius: 4vmin; 
+  cursor: pointer; 
+  margin: 0; 
+  background-color: white; 
+  color: black; 
+  transition: 0.3s; 
+}
+
+.btn-diminuir, .btn-aumentar, .btn-resetar { 
+  width: clamp(70px, 24vmin, 120px); 
+}
+
+.btn-diminuir:hover, 
+.btn-aumentar:hover, 
+.btn-resetar:hover { 
+  background-color: gray; 
+}
+
+.icone-rolagem {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+#btn-fullscreen { 
+  width: clamp(90px, 30vmin, 150px); 
+  display: inline-block; 
+  white-space: nowrap;
+}
+
+#btn-darkmode {
+padding: 0 3vmin;
+border: 0.5vmin solid black;
+}
+
+ul li, ol li { 
+  margin-bottom: 0.5em;  
+}
+
+p { 
+  margin-bottom: 1.2em; 
+}
+
+/* ===== TÍTULO + ÍCONE NA MESMA LINHA ===== */
+
+.linha-titulo {
+  position: relative;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Aparência de h4 e h5 */
+p.h4 {
+  font-size: clamp(14px, 8vmin, 50px);
+  font-weight: bold;
+  margin: 1em 0 1em 0;
+  text-align: center;
+}
+
+p.h5 {
+  font-size: clamp(13px, 7vmin, 40px);
+  font-weight: bold;
+  margin: 1em 0 1em 0;
+  text-align: center;
+}
+
+@media (orientation: portrait) {
+    body { padding-top: 5vmin; }
+    p.h4, p.h5, label, [id] { scroll-margin-top: 15vmin; }
+}
+
+@media (orientation: landscape) { 
+  body { padding-top: 5vmin; }
+  p.h4, p.h5, label, [id] { scroll-margin-top: 15vmin; }
+  .btn-aumentar, .btn-diminuir, .btn-resetar { 
+    padding: 2vmin; width: clamp(70px, 30vmin, 120px); }
+  #btn-fullscreen { 
+    padding: 2vmin; 
+    width: clamp(120px, 40vmin, 200px); 
+  }
+}
+
+.main { 
+  padding: 1vmin 2vmin 10vmin 2vmin; 
+  max-width: 100%; 
+  display: block; 
+}
+
+.container-botoes, .container-header { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.container-botoes { 
+  gap: 1.5vmin; 
+  padding: 0; 
+  background-color: #fff; 
+  border-radius: 2vmin; 
+}
+
+.container-header { 
+  gap: 2vmin; 
+  padding: 1vmin 2vmin; 
+}
+
+.azul, .verde { 
+  padding: 0 2vmin 0 4vmin; 
+  border: 0.5vmin solid black; 
+  border-radius: 2vmin; 
+  margin: 5vmin 0; 
+  width: 100%; 
+  position: relative; 
+}
+
+.azul { 
+  background-color: #007bff; 
+  color: white; 
+}
+
+.verde { 
+  background-color: #3FF527; 
+  color: black; 
+}
+
+.com-label { padding-top: 2vmin; }
+
+.label, .label-link { 
+  position: absolute; 
+  top: -2.5vmin; 
+  background-color: inherit; 
+  color: white; 
+  font-size: clamp(14px, 8vmin, 50px); 
+  padding: 0 2vmin; 
+  font-weight: bold; 
+  border-radius: 1vmin; 
+}
+
+.label { left: 4vmin; }
+.label-link { right: 4vmin; }
+
+.verde .label { color: black; }
+
+.com-label ul { 
+  padding-left: 6vmin; 
+  font-size: clamp(14px, 8vmin, 50px); 
+  list-style-type: disc; 
+}
+
+.com-label ol { 
+  padding-left: 0; 
+  list-style-position: inside; 
+  font-size: clamp(14px, 8vmin, 50px); 
+}
+
+.h { text-align: center; }
+
+.indice {
+  margin-top: 10vmin;
+}
+.indice p, .indice a {  
+  color: white; 
+  margin-bottom: 0.5em; 
+  line-height: 1.2; 
+}
+
+/* === MODO ESCURO === */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode a {
+  color: white;
+}
+
+body.dark-mode a:hover {
+  color: #ddd;
+}
+
+body.dark-mode .azul {
+  background-color: #0033CC;
+  color: white;
+}
+
+body.dark-mode .verde {
+  background-color: #006600;
+  color: white;
+}
+
+body.dark-mode .verde .label {
+  color: white;
+}
+
+/* Botões no modo escuro */
+body.dark-mode button,
+body.dark-mode .btn-diminuir,
+body.dark-mode .btn-aumentar,
+body.dark-mode .btn-resetar,
+body.dark-mode #btn-fullscreen,
+body.dark-mode #btn-darkmode {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+body.dark-mode button:hover {
+  background-color: #333;
+}
