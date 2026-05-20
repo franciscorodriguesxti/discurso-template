@@ -1,4 +1,4 @@
 # Discurso Template
 
-Modelo para Discurso apresentado em uma Reunião.
-O Design foi otimizado para Smartphone e Tablet.
+Modelo otimizado para Smartphone e Tablet.
+Útil para Discurso apresentado em uma Reunião.
